@@ -13,31 +13,33 @@
         <div class="mark">IE</div>
         <div>
           <strong>Execution Control</strong>
-          <span>PO to bank transfer</span>
+          <span>Python web app</span>
         </div>
       </div>
-      <nav class="nav" id="nav"></nav>
       <div class="rail-foot">
-        <div><b>Guardrails active</b></div>
-        <div>Passed quantity, signature order, invoice lock, compliance gate, and retention ledger.</div>
+        <div><b>Server-side workflow</b></div>
+        <div>Run the Python app to use the PO, WCC, billing, compliance, and finance pipeline.</div>
       </div>
     </aside>
     <main>
       <div class="topbar">
         <div>
-          <h1 id="pageTitle"></h1>
-          <div class="subtle" id="pageSubtitle"></div>
-        </div>
-        <div class="actions" style="margin-top:0">
-          <button class="secondary" id="seedBtn">Reset Demo Data</button>
-          <button class="secondary" id="exportBtn">Export JSON</button>
+          <h1>Industrial Execution Control</h1>
+          <div class="subtle">This project now runs through Python instead of JavaScript.</div>
         </div>
       </div>
-      <section id="app"></section>
+      <section class="panel">
+        <h2>Run The Python App</h2>
+        <div class="meta">
+          <div><span>Main file</span>app.py</div>
+          <div><span>Theme</span>styles.css</div>
+          <div><span>Data file</span>data.json is created automatically</div>
+        </div>
+        <p class="subtle">Start the app with Python, then open the localhost URL.</p>
+        <pre><code>python app.py</code></pre>
+        <p><a class="button-link" href="http://127.0.0.1:8765/">Open Python App</a></p>
+      </section>
     </main>
   </div>
-  <div class="toast" id="toast"></div>
-
-  <script src="app.js"></script>
 </body>
 </html>

@@ -1,25 +1,43 @@
-# Industrial Execution Control Web App
+# Industrial Execution Control Python Web App
 
-This is a static web app for the Rays-style PO to WCC to invoice workflow.
+This is a Python web app for the Rays-style PO to WCC to invoice workflow.
 
 ## Files
 
-- `index.html` - Page shell and app mount point.
+- `app.py` - Python web server, workflow logic, validations, page rendering, and data persistence.
 - `styles.css` - Corporate black/yellow theme and responsive layout.
-- `app.js` - Data model, workflow logic, forms, validations, and localStorage persistence.
+- `index.html` - Small landing page that points to the Python app.
+- `data.json` - Created automatically when the app runs. Stores vendors, POs, MB logs, WCCs, invoices, compliance records, and retention ledger entries.
 
 ## Run
 
-Open `index.html` directly in a browser, or serve this folder locally:
+From this folder, run either:
 
 ```bash
-python -m http.server 8765 --directory outputs
+python app.py
+```
+
+Or, if `python` is not on PATH on this machine:
+
+```powershell
+.\run_app.ps1
 ```
 
 Then open:
 
 ```text
-http://127.0.0.1:8765/index.html
+http://127.0.0.1:8765/
 ```
 
-Use **Reset Demo Data** inside the app if old browser data is still cached.
+## Workflow Covered
+
+- Vendor onboarding
+- LOI, PO, PO terms, and signed annexures
+- Measurement Book logging
+- WCC table with executed and passed quantity validation
+- Rays Site Engineer, Quality, and Vertical Lead sign-off
+- Certified WCC sent to vendor
+- Tax invoice limited by WCC passed quantity
+- Billing checklist and HR compliance
+- PF and ESIC proof tracking
+- PMO approval, 10% retention, and payment release
